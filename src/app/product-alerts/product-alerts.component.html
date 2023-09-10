@@ -1,0 +1,4 @@
+<p *ngIf="product && product.price > 700">
+    <!-- When you call emit(), it passes the emitted value to the next() method of any subscribed observer. -->
+    <button type="button" (click)="notify.emit()">Notify Me</button>
+</p>

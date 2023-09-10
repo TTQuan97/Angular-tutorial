@@ -1,0 +1,14 @@
+<h3>shipping prices!</h3>
+<!-- When you have a component property that holds an observable or a promise, 
+you can use the 'async' pipe in the template to subscribe to that observable -->
+<div class="shipping-item" *ngFor="let shipping of shippingCosts|async">
+    <div>{{shipping.type}}</div>
+    <div>{{shipping.price|currency}}</div>
+    <div>{{shipping.date}}</div>
+    <div>{{shipping.age|number}}</div>
+</div>
+<h3>Category</h3>
+<div class="shipping-item" *ngFor="let category of categoryList|async">
+    <div>{{category.id}}</div>
+    <div>{{category.name}}</div>
+</div>

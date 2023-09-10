@@ -1,0 +1,16 @@
+<h3>Cart</h3>
+<p>
+    <a [routerLink]="['/shipping']">Shipping Prices</a>
+</p>
+<div class="cart-item" *ngFor="let i of productList">
+    <span>{{ i.name }}</span>
+    <span>{{ i.price | currency }}</span>
+</div>
+<!--formControlName: Syncs a FormControl in an existing FormGroup to a form control element by name. -->
+<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+    Name<br>
+    <input type="text" formControlName="name"><br>
+    Address<br>
+    <input type="text" formControlName="address"><br>
+    <button class="button" type="submit">Purchase</button>
+</form>
